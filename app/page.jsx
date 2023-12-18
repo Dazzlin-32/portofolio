@@ -51,7 +51,7 @@ export default function Home() {
 
     <div className={styles.quote}>
         <span className={styles.top}>&quot</span>
-      <h2>If you think you it's simple, then you have misunderstood the problem</h2>
+      <h2>If you think you it is simple, then you have misunderstood the problem</h2>
       <p>Bjarne Stroustrup</p>
 
     </div>
