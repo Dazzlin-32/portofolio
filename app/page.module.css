@@ -20,7 +20,6 @@
   flex-direction: row;
   justify-content: space-between;
   font-family: var(--font-mono);
-  
 }
 
 .navLinks span{
@@ -96,7 +95,7 @@
 }
 
 .skills{
-  
+ width: 100%;
 }
 
 .skills span{
@@ -116,103 +115,28 @@
   border: none;
   height: 1px;
   background-color: var(--primary-font);
-  width: 40%;
+  width: 50%;
   margin: 1rem;
 }
 
+.skillsContainer{
+  display:'flex';
+  flex-direction:'row';
+}
 .shapes{
   width: 40%;
 }
 
 
-.triangles{
-  width: fit-content;
-  margin: 0px;
-  position: relative;
-  left: 2rem;
-  top: 2rem;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
-}
-
-@keyframes spin {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(360deg);
-  }
-}
-
-.triangleRight{
-  width: 0;
-	height: 0;
-	border-top: 5px solid transparent;
-	border-left: 10px solid var(--primary-font);
-	border-bottom: 5px solid transparent;
-  position: relative;
-  top: -0.25rem;
-  left:  -0.35rem;
-}
-
-.triangleDown{
-  width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 10px solid var(--primary-font);
-  position: relative;
-
-  
-}
-
-.triangleLeft
-{
-  width: 0;
-	height: 0;
-	border-top: 5px solid transparent;
-	border-right: 10px solid var(--primary-font);
-	border-bottom: 5px solid transparent;
-  position: relative;
-  top: -0.90rem;
-  right: -0.40rem;
-}
-
-.triangleUp{
-  width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-bottom: 10px solid var(--primary-font);
-  position: relative;
-  top: -1.1rem;
-}
-
-.rectangle{
-  width: 0px;
-  height: 0px;
-  border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 25px solid var(--primary-font);
-  border-top: 25px solid var(--primary-font);
-  animation-name: spin;
-  animation-duration: 10000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
-}
 
 .dot2{
-  margin: 3rem;
-  padding-top: 2rem;
-  padding-left: 4rem;
+  padding-top: 19rem;
 }
 
 .dot2 span{
 
-  margin: 1rem; 
-  font-size: 3rem;
+  margin: 0.5rem; 
+  font-size: 1rem;
   font-weight: bold;
   z-index: -1;
 }
@@ -222,6 +146,12 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
+}
+
+.purpleBackText{
+    background-color: var(--primary-font);
+    width: max-content;
+    padding: 0.5rem;
 }
 
 .card {
@@ -241,6 +171,7 @@
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
+  font-family: var(--font-mono);
 }
 
 .card p {
@@ -252,7 +183,6 @@
 }
 
 .about {
-  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -265,13 +195,14 @@
 .aboutText{
   font-family: var(--font-mono);
   font-weight: lighter;
-  padding: 3rem;
+  padding: 2rem;
   text-align: justify;
-  width: 60%;
+ 
 }
 
 .about span{
   color: var(--primary-font);
+  margin: 0px;
 }
 .center::before {
   background: var(--secondary-glow);
@@ -302,13 +233,13 @@
 }
 .dot {
   position: relative;
-  top: -13rem;
+  top: -10rem;
   right: -16rem;
 }
 .dot span
 {
-  margin: 1rem; 
-  font-size: 3rem;
+  margin: 0.75rem; 
+  font-size: 2rem;
   font-weight: bolder;
   z-index: -1;
 }
@@ -407,15 +338,58 @@
     z-index: 1;
   }
 }
+.contactsTxt {
+  display: flex;
+  flex-direction: row;
+}
 
 .contacts h2 {
   font-family: var(--font-mono);
-  font-weight: lighter;
   font-size: medium;
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
+.contacts hr {
+  color: var(--primary-font);
+  border: none;
+  height: 4px;
+  background-color: var(--primary-font);
+  width: 50%;
+  margin: 1rem;
+}
+
+
+.contactsTxt span {
+  color: var(--primary-font);
+}
+.contacts span {
+}
+
+/* and Smaller Desktop */
+@media (min-width: 800px) and (max-width: 1120px) {
+  .skillsTxt{
+    margin: 3rem;
+  }
+  .skillsContainer{
+    margin: 5rem;
+  }
+  .grid {
+
+    grid-template-columns: repeat(2, 50%);
+
+  }
+
+  .card h2{
+    font-size: 18px;
+  }
+
+  .dot2 span{
+    margin: 0.5rem;
+  }
+
+}
+
+/*   Tablet */
+@media (min-width: 701px) and (max-width: 799px)  {
   .grid {
     grid-template-columns: repeat(2, 50%);
   }

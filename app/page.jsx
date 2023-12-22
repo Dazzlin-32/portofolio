@@ -11,7 +11,7 @@ export default function Home() {
       </div>
       <div className={styles.navLinks}>
         <Link href='#about'><span>#</span>about</Link>
-        <Link  href='#contacts'><span>#</span>skills</Link>
+        <Link  href='#skills'><span>#</span>skills</Link>
         <Link  href='#projects'><span>#</span>projects</Link>
         <Link  href='#contacts'><span>#</span>contacts</Link>
       </div>
@@ -19,8 +19,7 @@ export default function Home() {
 
       <div className={styles.about }>
         <div className={styles.aboutText}>
-          <h1>Sekina Sherif is a <span>front end developer</span> and <span> graphics designer</span></h1>
-          <br />
+          <h1>Sekina Sherif is a <span>FRONT-END DEVELOPER </span>and <span>GRAPHICS DESIGN</span></h1>
           <p>She makes <span>Creative</span> and a <span>Responsive</span> websites which addresses your needs :) </p>
         </div>
         <div>
@@ -50,18 +49,17 @@ export default function Home() {
       </div>
 
     <div className={styles.quote}>
-        <span className={styles.top}>&quot</span>
       <h2>If you think you it is simple, then you have misunderstood the problem</h2>
       <p>Bjarne Stroustrup</p>
 
     </div>
-      <div id="skills" className={styles.skills}>
+    <div id="skills" className={styles.skills}>
         <div className={styles.skillsTxt}>
           <h2><span>#</span>skills</h2>
            <hr />
         </div>
-      <div className='' style={{display:'flex', flexDirection:'row'}}> 
-        <div className={styles.shapes}>
+      <div className={styles.skillsContainer} style={{display:'flex', flexDirection:'row'}}> 
+        {/* <div className={styles.shapes}>
           <div className={styles.triangles}>
             <div className={styles.triangleDown}></div>
             <div className={styles.triangleRight}></div>
@@ -80,8 +78,8 @@ export default function Home() {
             <span>&#183;</span>  <span>&#183;</span> <span>&#183;</span> <span>&#183;</span> <span>&#183;</span>
             <br />
           </div>
-        </div>
-          <div className={styles.grid}>
+        </div> */}
+        <div className={styles.grid}>
             
       
           
@@ -304,12 +302,59 @@ export default function Home() {
                   </a>
         
           
-          </div>
+        </div>
       </div>  
-      
+    
+    </div>
+    <div id="projects" className={styles.skills}>
+        <div className={styles.skillsTxt}>
+          <h2><span>#</span>Projects</h2>
+           <hr />
+        </div>
+        <div className={styles.grid}>
+          
+          <a
+                      href="https://zacro-trading.vercel.app/" 
+                      className={styles.card}
+                      rel="noopener noreferrer"
 
-      <div id="contacts" className={styles.contacts}>
-          <div className={styles.skillsTxt}>
+                    >
+                      <Image
+                      style={{background:"black"}}
+                      src="/zacro.png"
+                      alt="Profile Picture"
+                      width={300}
+                      height={250}
+                      priority
+                      />
+                      <h2 className={styles.purpleBackText}>
+                      Live Demo
+                      </h2>
+          </a>
+
+          <a
+                      href="https://asfaw-tihune-pc445wfwv-dazzlin-32.vercel.app/" 
+                      className={styles.card}
+                      rel="noopener noreferrer"
+
+                    >
+                      <Image
+                      style={{background:"black"}}
+                      src="/asfaw.png"
+                      alt="Profile Picture"
+                      width={300}
+                      height={250}
+                      priority
+                      />
+                      <h2 className={styles.purpleBackText}>
+                      Live Demo
+                      </h2>
+          </a>
+
+        </div>
+    </div>
+    <div id="contacts" className={styles.contacts}>
+          <div className={styles.contactsTxt}>
               <h2><span>#</span>contacts</h2>
               <hr />
           </div>
@@ -318,9 +363,9 @@ export default function Home() {
           <h2><span><a href="https://www.figma.com/@sekinahussein">Figma</a></span></h2>
           <h2><span><a href="https://www.linkedin.com/in/sekina-hussein/">LinkedIn</a></span></h2>
           <h2><span><a href="https://medium.com/@sekinas64"></a>Medium</span></h2>
-      </div>
+    </div>
 
-      </div>
+      
     </main>
   )
 }
